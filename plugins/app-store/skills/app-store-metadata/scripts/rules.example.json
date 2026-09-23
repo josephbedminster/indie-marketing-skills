@@ -1,0 +1,11 @@
+{
+  "useDefaults": true,
+  "required": ["name", "subtitle", "keywords", "description", "promotionalText", "whatsNew", "supportUrl", "privacyPolicyUrl"],
+  "forbidden": [
+    { "pattern": "—", "fields": "*", "message": "em dash (house style: use a comma, colon or period)" },
+    { "pattern": "\\b(free plan|free trial|for free|gratis|grátis|gratuit|gratuito|kostenlos|darmowy|darmowa|darmowe|plan gratuit)\\b", "flags": "iu", "fields": ["name", "subtitle", "description", "promotionalText", "whatsNew"], "message": "promises something free (the app is paid from day one)" },
+    { "pattern": "\\b(rate us|leave a review|give us 5 stars|note-nous|laisse une note)\\b", "flags": "iu", "fields": ["whatsNew"], "message": "asks for a rating in release notes" }
+  ],
+  "competitorBrands": ["quizlet", "duolingo"],
+  "keywordsMinLength": 94
+}

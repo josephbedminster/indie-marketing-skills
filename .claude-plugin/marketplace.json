@@ -1,9 +1,11 @@
 {
   "name": "indie-marketing-skills",
-  "owner": { "name": "Joseph Bedminster" },
+  "owner": {
+    "name": "Joseph Bedminster"
+  },
   "metadata": {
-    "description": "Claude Code skills for indie hackers who do their own growth: product analytics investigations, paid funnels, ads and App Store.",
-    "version": "0.2.0"
+    "description": "Claude Code skills for indie hackers who do their own growth: product analytics, paid ads (ChatGPT, Apple Search Ads, TikTok), App Store metadata and ASO, AI UGC content, programmatic SEO.",
+    "version": "0.3.0"
   },
   "plugins": [
     {
@@ -11,6 +13,30 @@
       "source": "./plugins/posthog-growth",
       "description": "Map your PostHog funnel, investigate conversion drops with dashboards, events and session replays, and judge paid campaigns by real signups and customers.",
       "category": "analytics"
+    },
+    {
+      "name": "paid-ads",
+      "source": "./plugins/paid-ads",
+      "description": "Run ChatGPT Ads and Apple Search Ads from the terminal (status, reports, diagnosis, safe campaign creation) and drive TikTok Ads Manager in the browser, with spend always confirmed by you.",
+      "category": "marketing"
+    },
+    {
+      "name": "app-store",
+      "source": "./plugins/app-store",
+      "description": "App Store listing as code: per-locale metadata checked, diffed and pushed through the App Store Connect API, ASO keyword research, screenshot set guidance.",
+      "category": "marketing"
+    },
+    {
+      "name": "ugc-content",
+      "source": "./plugins/ugc-content",
+      "description": "AI UGC that doesn't look like AI: consistent personas, porting photoreal image prompts into your pipeline, 9:16 video ads rendered from HTML with image-to-video clips.",
+      "category": "marketing"
+    },
+    {
+      "name": "seo",
+      "source": "./plugins/seo",
+      "description": "Programmatic SEO internal linking decided by a near-free decision model, plus the method to run any massive yes/no classification with it.",
+      "category": "marketing"
     }
   ]
 }

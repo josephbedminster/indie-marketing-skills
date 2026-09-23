@@ -1,0 +1,8 @@
+{
+  "name": "paid-ads",
+  "version": "0.1.0",
+  "description": "Run your own paid acquisition as an indie founder: ChatGPT Ads and Apple Search Ads through their APIs (status, spend, CPC / CPI, search terms, safe pause / budget / create), TikTok Ads Manager through the browser, with field-tested pitfalls and an explicit yes before any money moves.",
+  "author": { "name": "Joseph Bedminster" },
+  "license": "MIT",
+  "keywords": ["ads", "paid-acquisition", "chatgpt-ads", "openai-ads", "apple-search-ads", "tiktok-ads", "indie-hacker", "cpc", "cpi"]
+}

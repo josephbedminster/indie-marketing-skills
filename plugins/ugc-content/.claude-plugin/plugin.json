@@ -1,0 +1,8 @@
+{
+  "name": "ugc-content",
+  "version": "0.1.0",
+  "description": "Produce UGC-style content with AI personas: keep one face consistent across images, port photoreal image prompts into your own pipeline, and render 9:16 video ads (image-to-video clips, HTML timeline, ffmpeg) without a video SaaS.",
+  "author": { "name": "Joseph Bedminster" },
+  "license": "MIT",
+  "keywords": ["ugc", "ai-persona", "image-generation", "prompt-engineering", "video-ads", "tiktok", "reels", "ffmpeg", "playwright", "openrouter"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "app-store",
+  "version": "0.1.0",
+  "description": "Keep your App Store listing as versioned JSON, check it against Apple's limits and ASO rules, diff and push it to App Store Connect safely, research keywords with the open-source aso-mcp server, and ship screenshot sets App Store Connect accepts.",
+  "author": { "name": "Joseph Bedminster" },
+  "license": "MIT",
+  "keywords": ["app-store", "app-store-connect", "aso", "keywords", "metadata", "screenshots", "ios", "localization"]
+}

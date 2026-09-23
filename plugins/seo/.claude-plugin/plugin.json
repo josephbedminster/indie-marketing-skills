@@ -1,0 +1,8 @@
+{
+  "name": "seo",
+  "version": "0.1.0",
+  "description": "Programmatic SEO at scale: internal linking of thousands of generated pages with a cheap decision model, and a method for running massive closed questions (classify, filter, score) at near-zero cost.",
+  "author": { "name": "Joseph Bedminster" },
+  "license": "MIT",
+  "keywords": ["seo", "programmatic-seo", "internal-linking", "sitemap", "search-console", "decision-model", "classification", "openrouter"]
+}
