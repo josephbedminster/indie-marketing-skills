@@ -1,0 +1,8 @@
+{
+  "name": "posthog-growth",
+  "version": "0.1.0",
+  "description": "Map your PostHog funnel, investigate conversion drops with dashboards, events and session replays, and judge paid campaigns by real signups and customers.",
+  "author": { "name": "Joseph Bedminster" },
+  "license": "MIT",
+  "keywords": ["posthog", "analytics", "funnel", "session-replay", "ads", "conversion"]
+}

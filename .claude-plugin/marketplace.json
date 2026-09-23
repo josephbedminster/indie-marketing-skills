@@ -1,0 +1,16 @@
+{
+  "name": "indie-marketing-skills",
+  "owner": { "name": "Joseph Bedminster" },
+  "metadata": {
+    "description": "Claude Code skills for indie hackers who do their own growth: product analytics investigations, paid funnels, ads and App Store.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "posthog-growth",
+      "source": "./plugins/posthog-growth",
+      "description": "Map your PostHog funnel, investigate conversion drops with dashboards, events and session replays, and judge paid campaigns by real signups and customers.",
+      "category": "analytics"
+    }
+  ]
+}
