@@ -47,7 +47,9 @@ RevenueCat code):
 4. **Surfaces:** marketing site, web app, iOS / Android app, WebView; which
    of them send events to this PostHog project.
 5. **Decisions already taken** that an analysis must not re-open (for
-   example "the paywall stays right after onboarding").
+   example "the paywall stays right after onboarding"), and the project's
+   conventions: report language, where reports go, where ad spend can be
+   read.
 
 The answers calibrate everything downstream: the sample size under which a
 number is noise, which benchmark row applies, the analysis window (a
@@ -118,8 +120,19 @@ GROUP BY traffic ORDER BY people DESC
 Trap: an event **without a user agent** is classified `Automation`. Events
 sent server-side or by a hand-written beacon (a landing page tracking
 script, a webhook) have no user agent and would all be dropped as bots.
-Check which of the funnel events have an empty user agent before applying
-the filter, and exempt them explicitly.
+Check which events the classifier flags before applying it:
+
+```sql
+SELECT event, uniq(person_id) AS people, count() AS n
+FROM events
+WHERE timestamp >= now() - INTERVAL 7 DAY
+  AND isLikelyBot(coalesce(nullIf(properties.$raw_user_agent, ''), properties.$user_agent))
+GROUP BY event ORDER BY people DESC LIMIT 30
+```
+
+If it only flags your own beacon events and PostHog internals, the
+classifier is useless here: exclude the internal events by name instead and
+keep the beacons.
 
 **Other noise**, not caught by the user agent:
 
@@ -202,9 +215,20 @@ AND NOT startsWith(toString(person_id), '<founder prefix>')
 ## Replay and heatmaps
 <replay enabled / sample rate / not on mobile…; heatmaps on or off>
 
+## Project conventions
+Report language and style: <French, no em dash…>. Reports saved to: <reports/…>.
+Spend and campaign sources: <ads skill / script / "ask me">.
+Other context sources: <other agent sessions, changelog, Slack…>.
+Repo for PR links: <owner/repo>. Memory or decision notes to read: <files>.
+
 ## History
 <YYYY-MM-DD: event X added, event Y fired twice until …>
 ```
+
+**Project conventions** is where a project keeps its own habits (language,
+report location, where spend comes from, which other tools or notes hold
+context). The other skills follow it over their defaults, so a project
+never needs to fork them.
 
 Add a line to **History** each time an investigation discovers a tracking
 change or bug: the next investigation needs it to avoid comparing apples

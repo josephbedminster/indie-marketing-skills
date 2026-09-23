@@ -22,6 +22,8 @@ name changed) are the same as in `posthog-funnel-map`. Every call in this
 skill is a read, except creating an annotation or a replay scanner, which
 needs the user's yes.
 
+**Project conventions** in the map (report language and style, report location, spend sources, extra context sources) override this skill's defaults.
+
 ## Step 0: what changed (in parallel, before any analytics)
 
 Numbers without context lead to wrong stories. Collect:
@@ -41,7 +43,10 @@ Numbers without context lead to wrong stories. Collect:
    API is available: which campaigns started, stopped or changed budget, and
    when. A new low-intent source can halve every rate without any product
    problem.
-4. **Past decisions.** The map's "decisions not to re-open", plus CLAUDE.md
+4. **Other context sources** listed in the map's conventions: transcripts of
+   other agent sessions (what was launched, paused, shipped), a changelog,
+   decision notes. They often explain a change nobody annotated.
+5. **Past decisions.** The map's "decisions not to re-open", plus CLAUDE.md
    or the project's notes. A recommendation that contradicts one is framed as
    an experiment behind a flag, not as a fix.
 
@@ -169,6 +174,6 @@ Afterwards:
   (`annotation-create`, needs `annotation:write`), so the next chart
   explains itself.
 - A useful replay filter: offer to save it as a playlist.
-- If the user says "fix 1 to 3": re-read the decisions from step 0.4, check
+- If the user says "fix 1 to 3": re-read the decisions from step 0.5, check
   on the latest main branch that each problem still exists, work on a
   branch, and list what you did not verify.

@@ -13,6 +13,8 @@ Read `.claude/posthog-funnel-map.md` first (run `posthog-funnel-map` if it
 doesn't exist). Tool conventions are the same as in that skill. The brief is
 read-only: it never changes flags, experiments or campaigns.
 
+**Project conventions** in the map (report language and style, report location, spend sources, extra context sources) override this skill's defaults.
+
 ## State: the watchlist file
 
 Keep `.claude/posthog-brief-state.md` next to the funnel map. Create it on the

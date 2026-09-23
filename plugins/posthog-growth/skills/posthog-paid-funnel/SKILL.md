@@ -14,6 +14,8 @@ Read `.claude/posthog-funnel-map.md` first (run `posthog-funnel-map` if it
 doesn't exist): it holds the step events, the UTM conventions, the noise
 filter and the blind spots. Tool conventions are the same as in that skill.
 
+**Project conventions** in the map (report language and style, report location, spend sources, extra context sources) override this skill's defaults.
+
 ## 1. Check what is measurable before measuring
 
 - **UTMs reach PostHog?** `read-data-schema` `event_property_values` on

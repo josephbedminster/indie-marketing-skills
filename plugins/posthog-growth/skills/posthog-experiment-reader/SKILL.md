@@ -16,6 +16,8 @@ baseline. Tool conventions are the same as in that skill. Everything here is
 read-only: never stop, ship or edit an experiment or flag without the
 user's explicit yes.
 
+**Project conventions** in the map (report language and style, report location, spend sources, extra context sources) override this skill's defaults.
+
 ## 1. Resolve the experiment
 
 - A PostHog experiment: `experiment-get-all` (or `system.experiments`), then
