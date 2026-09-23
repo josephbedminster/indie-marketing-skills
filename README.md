@@ -93,6 +93,14 @@ In Claude Code:
 
 Install only the ones you need.
 
+Other agents (Cursor, Codex, Copilot, any [skills.sh](https://skills.sh) client), or skills without the plugin wrapper:
+
+```bash
+npx skills add josephbedminster/indie-marketing-skills            # pick skills interactively
+npx skills add josephbedminster/indie-marketing-skills --list     # see all 17 skills
+npx skills add josephbedminster/indie-marketing-skills --skill posthog-investigation
+```
+
 For `posthog-growth`, connect the PostHog MCP server (`https://mcp.posthog.com/mcp`, OAuth).
 For replay summaries, grant the `replay_scanner:read` and
 `replay_scanner:write` scopes; for conversion goals, `marketing_analytics:read`.
